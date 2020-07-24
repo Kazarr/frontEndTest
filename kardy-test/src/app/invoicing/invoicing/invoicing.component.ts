@@ -12,6 +12,7 @@ export class InvoicingComponent implements OnInit {
 
   invoices: InvoiceModel[];
   filtered: InvoiceModel[];
+  filteredTerm: string;
 
   addTerm = new FormControl();
 
@@ -26,6 +27,7 @@ export class InvoicingComponent implements OnInit {
 
   filter(filterTerm: string) {
     if (filterTerm) {
+      this.filteredTerm = filterTerm;
       this.filtered = this.invoices.filter(x => x.name.includes(filterTerm))
     } else {
       this.filtered = this.invoices
@@ -34,6 +36,6 @@ export class InvoicingComponent implements OnInit {
 
   add() {
     this.invoices.unshift({name: this.addTerm.value, price: Math.random()});
-    this.filter('');
+    this.filter(this.filteredTerm);
   }
 }

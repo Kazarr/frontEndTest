@@ -9,8 +9,17 @@ import {InvoiceModel} from "../invoice/invoice.model";
 })
 export class SideBarComponent implements OnInit {
 
+  private paInvoices: InvoiceModel[];
+
   @Input()
-  invoices: InvoiceModel[];
+  set invoices(value: InvoiceModel[]){
+    this.paInvoices = value;
+    this.payed = this.invoices.filter(x => x.price > 0.5).length
+    this.unpayed = this.invoices.filter(x => x.price <= 0.5).length
+  };
+  get invoices():InvoiceModel[]{
+    return this.paInvoices;
+  }
 
   payed:number;
   unpayed:number;
@@ -23,8 +32,7 @@ export class SideBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.payed = this.invoices.filter(x => x.price > 0.5).length
-    this.unpayed = this.invoices.filter(x => x.price <= 0.5).length
+
   }
 
   searchEventEmit(){
