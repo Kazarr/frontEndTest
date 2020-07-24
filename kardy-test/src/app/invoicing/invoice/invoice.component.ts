@@ -17,7 +17,7 @@ export class InvoiceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if (this.invoice.price >= 0.5) {
+    if (this.invoice?.price >= 0.5) {
       this.invoiceState = 'zaplatena';
       this.invoiceStateStyle = 'badge-primary';
     }else {

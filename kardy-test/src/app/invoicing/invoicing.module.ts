@@ -5,13 +5,12 @@ import { InvoicingComponent } from './invoicing/invoicing.component';
 import {InvoicingRoutingModule} from "./invoicing-routing.module";
 import { InvoiceComponent } from './invoice/invoice.component';
 
-import {PayedDirective} from "../directives/payed.directive";
 import { SideBarComponent } from './side-bar/side-bar.component';
 
 
 
 @NgModule({
-  declarations: [InvoicingComponent, InvoiceComponent, PayedDirective, SideBarComponent],
+  declarations: [InvoicingComponent, InvoiceComponent, SideBarComponent],
   imports: [
     InvoicingRoutingModule,
     CommonModule,
