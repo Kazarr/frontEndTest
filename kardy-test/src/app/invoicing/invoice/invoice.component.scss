@@ -1,7 +1,7 @@
-.inovice-wrapper {
+:host {
+  width: 100%;
+}
 
-  .invoice-state {
-    margin-left: 25px;
-
-  }
+span{
+  float: right;
 }

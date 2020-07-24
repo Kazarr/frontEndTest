@@ -1,3 +1,2 @@
-<div class="inovice-wrapper">
-  <span>{{invoice.name}}</span>
-</div>
+{{invoice.name}}
+<span class="badge badge-primary badge-pill" [ngClass]="invoiceStateStyle">{{invoiceState}}</span>

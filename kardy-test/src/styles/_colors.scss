@@ -1,4 +1,7 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 // Color system
 
@@ -183,7 +186,7 @@ $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $colors: ();
-// stylelint-disable-next-line scss/dollar-variable-default
+// stylelint-disable-next-line styles/dollar-variable-default
 $colors: map-merge(
     (
       "blue": $blue,
@@ -217,7 +220,7 @@ $dark: $gray-800;
 }
 
 $theme-colors: ();
-// stylelint-disable-next-line scss/dollar-variable-default
+// stylelint-disable-next-line styles/dollar-variable-default
 $theme-colors: map-merge(
     (
       "primary": $primary,

@@ -1,0 +1,14 @@
+<aside class="sidebar">
+  <div class="header-wrapper">
+    <input [formControl]="filterTerm" (input)="searchEventEmit()" class="form-control" type="search" placeholder="Hľadaj">
+  </div>
+  <ul class="list-group">
+    <li *ngFor="let i of invoices" class="list-group-item d-flex justify-content-between align-items-center">
+      <app-invoice [invoice]="i"></app-invoice>
+    </li>
+  </ul>
+  <div class="sidebar-footer">
+    <div class="font-weight-bold">Uhradene: {{payed}}</div>
+    <div class="font-weight-bold">Neuhradene: {{unpayed}}</div>
+  </div>
+</aside>
